@@ -1,6 +1,6 @@
 # Приложение симулятор чата для знакомств
 
-## Getting Started
+## Старт
 
 First, run the development server:
 
