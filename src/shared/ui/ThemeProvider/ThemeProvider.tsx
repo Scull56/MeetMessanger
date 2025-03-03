@@ -1,12 +1,10 @@
+"use client";
+
 import { createContext, useEffect, useState } from "react";
+import { Theme } from "./Theme";
+import { ThemeContext } from "./ThemeContext";
 
-type Theme = "light" | "dark";
-interface ThemeContextType {
-  theme: Theme;
-  toggleTheme: () => void;
-}
-
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+const ThemeContextProvider = createContext<ThemeContext | undefined>(undefined);
 
 export default function ThemeProvider({
   children,
@@ -32,8 +30,8 @@ export default function ThemeProvider({
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContextProvider.Provider value={{ theme, toggleTheme }}>
       {children}
-    </ThemeContext.Provider>
+    </ThemeContextProvider.Provider>
   );
 }

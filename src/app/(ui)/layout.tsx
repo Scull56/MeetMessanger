@@ -1,5 +1,5 @@
 import Sidebar from "@/widgets/navigation/Sidebar";
-import ThemeProvider from "../providers/ThemeProvider";
+import ThemeProvider from "@/shared/ui/ThemeProvider/index";
 
 export default function Layout({
   children,
